@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:/Users/devin/devmountain/classes/Week 6/6.3/MemoryGame/MemoryApp/MemoryApp/Model Controller"
-      name = "Model Controller">
-      <FileRef
-         location = "group:GameController.swift">
-      </FileRef>
-   </Group>
    <FileRef
       location = "self:">
    </FileRef>
