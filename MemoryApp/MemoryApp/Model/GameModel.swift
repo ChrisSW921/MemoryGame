@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Game {
+class Highscore {
     
     let score: Int
     
