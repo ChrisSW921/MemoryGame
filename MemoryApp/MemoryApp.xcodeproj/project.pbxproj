@@ -13,6 +13,7 @@
 		FF8B990C25D48D5800B936F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8B990A25D48D5800B936F7 /* Main.storyboard */; };
 		FF8B990E25D48D5900B936F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8B990D25D48D5900B936F7 /* Assets.xcassets */; };
 		FF8B991125D48D5900B936F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8B990F25D48D5900B936F7 /* LaunchScreen.storyboard */; };
+		FF8B991A25D48F2800B936F7 /* Flash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B991925D48F2800B936F7 /* Flash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF8B990D25D48D5900B936F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8B991025D48D5900B936F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF8B991225D48D5900B936F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF8B991925D48F2800B936F7 /* Flash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FF8B990D25D48D5900B936F7 /* Assets.xcassets */,
 				FF8B990F25D48D5900B936F7 /* LaunchScreen.storyboard */,
 				FF8B991225D48D5900B936F7 /* Info.plist */,
+				FF8B991925D48F2800B936F7 /* Flash.swift */,
 			);
 			path = MemoryApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8B991A25D48F2800B936F7 /* Flash.swift in Sources */,
 				FF8B990925D48D5800B936F7 /* ViewController.swift in Sources */,
 				FF8B990525D48D5800B936F7 /* AppDelegate.swift in Sources */,
 				FF8B990725D48D5800B936F7 /* SceneDelegate.swift in Sources */,
