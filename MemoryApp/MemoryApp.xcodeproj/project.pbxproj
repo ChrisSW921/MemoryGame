@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E43C34E625D4909E00786FD9 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C34E525D4909E00786FD9 /* GameModel.swift */; };
 		FF8B990525D48D5800B936F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990425D48D5800B936F7 /* AppDelegate.swift */; };
 		FF8B990725D48D5800B936F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990625D48D5800B936F7 /* SceneDelegate.swift */; };
 		FF8B990925D48D5800B936F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990825D48D5800B936F7 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E43C34E525D4909E00786FD9 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		FF8B990125D48D5800B936F7 /* MemoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8B990425D48D5800B936F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8B990625D48D5800B936F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E43C34E425D4908900786FD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E43C34E525D4909E00786FD9 /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FF8B98F825D48D5800B936F7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		FF8B990325D48D5800B936F7 /* MemoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				E43C34E425D4908900786FD9 /* Model */,
 				FF8B990425D48D5800B936F7 /* AppDelegate.swift */,
 				FF8B990625D48D5800B936F7 /* SceneDelegate.swift */,
 				FF8B990825D48D5800B936F7 /* ViewController.swift */,
@@ -142,6 +153,7 @@
 			files = (
 				FF8B991A25D48F2800B936F7 /* Flash.swift in Sources */,
 				FF8B990925D48D5800B936F7 /* ViewController.swift in Sources */,
+				E43C34E625D4909E00786FD9 /* GameModel.swift in Sources */,
 				FF8B990525D48D5800B936F7 /* AppDelegate.swift in Sources */,
 				FF8B990725D48D5800B936F7 /* SceneDelegate.swift in Sources */,
 			);
