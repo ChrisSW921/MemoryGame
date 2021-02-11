@@ -17,9 +17,13 @@ class GameController {
     static let shared = GameController()
     var correctSequence: [Int] = []
     var guessedSequence: [Int] = []
+
     var currentLevel: Int = 1
     var highscore: Int?
     var highscoreCoreData: Highscore?
+
+    
+
     weak var delegate: PresentLevelDelegate?
     
     private lazy var fetchRequest: NSFetchRequest<Highscore> = {
@@ -31,20 +35,14 @@ class GameController {
     // MARK: - Methods
     func didTapSquare(button: Int) -> Bool {
         guessedSequence.append(button)
-        if guessedSequence.elementsEqual(correctSequence) {
-            return true
-        } else {
-            return false
-        }
-        //Add button Int to the guessedSequence
-        // if guessedSequence Int matches correctSequence return true
-        // else return false
+        return guessedSequence.last == correctSequence[guessedSequence.count - 1]
     }
     
-    func presentLevel(currentLevel: Int) {
+    func presentLevel() {
         correctSequence = []
         guessedSequence = []
-        for num in 0..<currentLevel {
+        
+        for _ in 0..<currentLevel {
             correctSequence.append(Int.random(in: 1...4))
         }
         delegate?.presentLevel()
