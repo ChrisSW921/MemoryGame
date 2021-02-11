@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795AC9AE25D4B685007E0A15 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC9AD25D4B685007E0A15 /* GameViewController.swift */; };
 		E43C34E625D4909E00786FD9 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C34E525D4909E00786FD9 /* GameModel.swift */; };
 		E43C34F025D4A8FF00786FD9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C34EF25D4A8FF00786FD9 /* GameController.swift */; };
-		795AC9A225D491B0007E0A15 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AC9A125D491B0007E0A15 /* GameViewController.swift */; };
 		FF8B990525D48D5800B936F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990425D48D5800B936F7 /* AppDelegate.swift */; };
 		FF8B990725D48D5800B936F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990625D48D5800B936F7 /* SceneDelegate.swift */; };
 		FF8B990925D48D5800B936F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B990825D48D5800B936F7 /* ViewController.swift */; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		795AC9AD25D4B685007E0A15 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E43C34E525D4909E00786FD9 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E43C34EF25D4A8FF00786FD9 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		795AC9A125D491B0007E0A15 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FF8B990125D48D5800B936F7 /* MemoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8B990425D48D5800B936F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8B990625D48D5800B936F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,15 +45,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795AC9AC25D4B685007E0A15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				795AC9AD25D4B685007E0A15 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		E43C34E425D4908900786FD9 /* Model */ = {
-		795AC9A025D4919C007E0A15 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E43C34E525D4909E00786FD9 /* GameModel.swift */,
-				795AC9A125D491B0007E0A15 /* GameViewController.swift */,
 			);
 			path = Model;
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		E43C34EE25D4A8FF00786FD9 /* Model Controller */ = {
@@ -84,9 +89,9 @@
 		FF8B990325D48D5800B936F7 /* MemoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				795AC9AC25D4B685007E0A15 /* View Controllers */,
 				E43C34EE25D4A8FF00786FD9 /* Model Controller */,
 				E43C34E425D4908900786FD9 /* Model */,
-				795AC9A025D4919C007E0A15 /* View Controllers */,
 				FF8B990425D48D5800B936F7 /* AppDelegate.swift */,
 				FF8B990625D48D5800B936F7 /* SceneDelegate.swift */,
 				FF8B990825D48D5800B936F7 /* ViewController.swift */,
@@ -169,9 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795AC9AE25D4B685007E0A15 /* GameViewController.swift in Sources */,
 				FF8B991A25D48F2800B936F7 /* Flash.swift in Sources */,
 				E43C34F025D4A8FF00786FD9 /* GameController.swift in Sources */,
-				795AC9A225D491B0007E0A15 /* GameViewController.swift in Sources */,
 				FF8B990925D48D5800B936F7 /* ViewController.swift in Sources */,
 				E43C34E625D4909E00786FD9 /* GameModel.swift in Sources */,
 				FF8B990525D48D5800B936F7 /* AppDelegate.swift in Sources */,
