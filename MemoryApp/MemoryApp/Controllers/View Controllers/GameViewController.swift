@@ -13,7 +13,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
-    
     @IBOutlet weak var watchCloselyLabel: UILabel!
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
@@ -27,6 +26,11 @@ class GameViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        greenButton.layer.cornerRadius = 14
+        purpleButton.layer.cornerRadius =  14
+        redButton.layer.cornerRadius =  14
+        yellowButton.layer.cornerRadius =  14
         GameController.shared.delegate = self
     }
     

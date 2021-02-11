@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,15 +23,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1m-5f-FSA">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" name="FontColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-TS-YSw">
-                                                <rect key="frame" x="212" y="0.0" width="202" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="212" y="0.0" width="202" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" name="FontColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -41,15 +41,21 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoK-pU-pfA">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
-                                                <state key="normal" title="Start game!"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <state key="normal" title="Start game! ">
+                                                    <color key="titleColor" name="FontColor"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    </preferredSymbolConfiguration>
+                                                </state>
                                                 <connections>
                                                     <action selector="startGameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aN9-Ar-wB7"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(watch closely)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sb-EK-cOp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch closely..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sb-EK-cOp">
                                                 <rect key="frame" x="0.0" y="180" width="414" height="180"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" name="FontColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -59,22 +65,22 @@
                                             <constraint firstItem="RoK-pU-pfA" firstAttribute="height" secondItem="uo9-zo-3Mj" secondAttribute="height" multiplier="0.5" id="jgZ-e1-uPJ"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-EI-pJ9" userLabel="Buttons">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6kT-EI-pJ9" userLabel="Buttons">
                                         <rect key="frame" x="0.0" y="504" width="414" height="296"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9pe-lF-gQb" userLabel="Top Row">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yn-1u-557">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="146"/>
-                                                        <color key="backgroundColor" red="0.054901960784313725" green="0.67843137254901964" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="139"/>
+                                                        <color key="backgroundColor" name="greenButton"/>
                                                         <connections>
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4L4-7k-nji"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2G-XD-LLr">
-                                                        <rect key="frame" x="209" y="0.0" width="205" height="146"/>
-                                                        <color key="backgroundColor" red="0.32941176470588235" green="0.050980392156862744" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="209" y="0.0" width="205" height="139"/>
+                                                        <color key="backgroundColor" name="purpleButton"/>
                                                         <connections>
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Rn-Pa-bjw"/>
                                                         </connections>
@@ -82,18 +88,18 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rRA-Np-wuM" userLabel="Bottom Row">
-                                                <rect key="frame" x="0.0" y="150" width="414" height="146"/>
+                                                <rect key="frame" x="0.0" y="143" width="414" height="153"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKx-68-ax1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="146"/>
-                                                        <color key="backgroundColor" red="0.93333333333333335" green="0.25882352941176467" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="153"/>
+                                                        <color key="backgroundColor" name="redButton"/>
                                                         <connections>
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sZz-tg-7da"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fD-ri-us3">
-                                                        <rect key="frame" x="209" y="0.0" width="205" height="146"/>
-                                                        <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="209" y="0.0" width="205" height="153"/>
+                                                        <color key="backgroundColor" name="yellowButton"/>
                                                         <connections>
                                                             <action selector="gameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIG-p2-cT5"/>
                                                         </connections>
@@ -101,26 +107,29 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Pd2-Ts-70i" firstAttribute="centerX" secondItem="yIt-wd-od2" secondAttribute="centerX" id="0Vl-Mm-3Wn"/>
                                     <constraint firstItem="Pd2-Ts-70i" firstAttribute="top" secondItem="yIt-wd-od2" secondAttribute="top" id="8QL-ze-ZaV"/>
                                     <constraint firstItem="Pd2-Ts-70i" firstAttribute="leading" secondItem="yIt-wd-od2" secondAttribute="leading" id="Cmq-Zn-sDO"/>
                                     <constraint firstItem="uo9-zo-3Mj" firstAttribute="width" secondItem="yIt-wd-od2" secondAttribute="width" id="FsM-uM-jfD"/>
                                     <constraint firstItem="uo9-zo-3Mj" firstAttribute="centerX" secondItem="Pd2-Ts-70i" secondAttribute="centerX" id="NS1-7z-Bbk"/>
+                                    <constraint firstItem="6kT-EI-pJ9" firstAttribute="centerX" secondItem="yIt-wd-od2" secondAttribute="centerX" id="bqa-vu-glp"/>
                                     <constraint firstItem="uo9-zo-3Mj" firstAttribute="height" secondItem="yIt-wd-od2" secondAttribute="height" multiplier="0.45" id="dIW-lK-Jgl"/>
                                     <constraint firstItem="Pd2-Ts-70i" firstAttribute="height" secondItem="yIt-wd-od2" secondAttribute="height" multiplier="0.18" id="j3c-dN-D3U"/>
                                     <constraint firstItem="Pd2-Ts-70i" firstAttribute="width" secondItem="yIt-wd-od2" secondAttribute="width" id="mQN-b8-uuh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pd2-Ts-70i" secondAttribute="trailing" id="oK5-OT-aVq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yIt-wd-od2" secondAttribute="bottom" id="3er-3T-vxd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yIt-wd-od2" secondAttribute="trailing" id="Hsj-7P-LfY"/>
+                            <constraint firstItem="yIt-wd-od2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JsB-qp-o5B"/>
                             <constraint firstItem="yIt-wd-od2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WRK-fD-e9C"/>
                             <constraint firstItem="yIt-wd-od2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="sZB-Fv-DWL"/>
                         </constraints>
@@ -142,8 +151,23 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="0.94901960784313721" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenButton">
+            <color red="0.054901960784313725" green="0.67843137254901964" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purpleButton">
+            <color red="0.32941176470588235" green="0.050980392156862744" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="redButton">
+            <color red="0.93333333333333335" green="0.25882352941176473" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellowButton">
+            <color red="1" green="0.82352941176470584" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
