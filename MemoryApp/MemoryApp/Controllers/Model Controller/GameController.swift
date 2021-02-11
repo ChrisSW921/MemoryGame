@@ -17,7 +17,7 @@ class GameController {
     static let shared = GameController()
     var correctSequence: [Int] = []
     var guessedSequence: [Int] = []
-    var currentLevel: Int = 1
+    var currentLevel: Int = 5
     weak var delegate: PresentLevelDelegate?
     
     // MARK: - Methods
@@ -33,10 +33,11 @@ class GameController {
         // else return false
     }
     
-    func presentLevel(currentLevel: Int) {
+    func presentLevel() {
         correctSequence = []
         guessedSequence = []
-        for num in 0..<currentLevel {
+        
+        for _ in 0..<currentLevel {
             correctSequence.append(Int.random(in: 1...4))
         }
         delegate?.presentLevel()
