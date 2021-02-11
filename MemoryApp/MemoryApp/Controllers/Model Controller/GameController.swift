@@ -23,14 +23,7 @@ class GameController {
     // MARK: - Methods
     func didTapSquare(button: Int) -> Bool {
         guessedSequence.append(button)
-        if guessedSequence.elementsEqual(correctSequence) {
-            return true
-        } else {
-            return false
-        }
-        //Add button Int to the guessedSequence
-        // if guessedSequence Int matches correctSequence return true
-        // else return false
+        return guessedSequence.last == correctSequence[guessedSequence.count - 1]
     }
     
     func presentLevel(currentLevel: Int) {
