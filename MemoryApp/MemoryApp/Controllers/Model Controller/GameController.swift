@@ -48,14 +48,17 @@ class GameController {
         delegate?.presentLevel()
     }
     
-    func nextLevel() {
-        
-    }
-    
     func saveHighScore() {
-        self.highscoreCoreData?.score = String(self.currentLevel)
-        self.highscore = currentLevel
-        CoreDataStack.saveContext()
+        if let existingHighScore = highscoreCoreData {
+            self.highscoreCoreData?.score = String(self.currentLevel)
+            self.highscore = currentLevel
+            CoreDataStack.saveContext()
+        }else {
+            Highscore(score: String(self.currentLevel))
+            self.highscore = currentLevel
+            CoreDataStack.saveContext()
+        }
+        
     }
     
     func fetchHighscore() {
@@ -68,6 +71,8 @@ class GameController {
             guard let highscore = Int(highscoreAsString) else { return }
             
             self.highscore = highscore
+        }else {
+            self.highscore = 0
         }
     }
     

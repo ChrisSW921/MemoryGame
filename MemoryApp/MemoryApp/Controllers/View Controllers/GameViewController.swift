@@ -34,6 +34,7 @@ class GameViewController: UIViewController {
         GameController.shared.delegate = self
         GameController.shared.fetchHighscore()
         lockInterface()
+        GameController.shared.fetchHighscore()
         highScoreLabel.text = "Highscore: \(GameController.shared.highscore ?? 0)" 
     }
     
@@ -44,11 +45,53 @@ class GameViewController: UIViewController {
         currentLevelLabel.text = "Current level: \(String(GameController.shared.currentLevel))"
         GameController.shared.presentLevel()
         lockInterface()
+        startGameButton.isHidden = true
     }
     
     @IBAction func gameButtonTapped(_ sender: UIButton) {
+        var buttonTapped: Int = 1
         sender.flash()
-        print("Button tapped")
+        switch sender{
+        case greenButton:
+            buttonTapped = 1
+        case purpleButton:
+            buttonTapped = 2
+        case redButton:
+            buttonTapped = 3
+        case yellowButton:
+            buttonTapped = 4
+        default:
+            buttonTapped = 1
+        }
+        
+        if GameController.shared.didTapSquare(button: buttonTapped) {
+            //This will run if the guess was a correct guess
+            if GameController.shared.didBeatLevel(){
+                //Show next level button
+                lockInterface()
+                let highscore = GameController.shared.highscore ?? 0
+                if GameController.shared.currentLevel > highscore {
+                    GameController.shared.saveHighScore()
+                    highScoreLabel.text = "Highscore: \(GameController.shared.highscore ?? 0)"
+                }
+                startGameButton.setTitle("Next Level", for: .normal)
+                watchCloselyLabel.text = "Watch closely..."
+                UIView.animate(withDuration: 0.5) {
+                    self.startGameButton.isHidden = false
+                }
+                
+                
+            }
+        }else {
+            //This will run if it was incorrect
+            lockInterface()
+            startGameButton.setTitle("Restart", for: .normal)
+            watchCloselyLabel.text = "Watch closely..."
+            UIView.animate(withDuration: 0.5) {
+                self.startGameButton.isHidden = false
+            }
+            GameController.shared.currentLevel = 0
+        }
     }
     
     // MARK: - Game Functions
@@ -64,22 +107,6 @@ class GameViewController: UIViewController {
         yellowButton.isUserInteractionEnabled = false
         redButton.isUserInteractionEnabled = false
         purpleButton.isUserInteractionEnabled = false
-    }
-    
-    func updateLevelFormula() {
-        
-    }
-    
-    func animateButtonFlashes() {
-        
-    }
-    
-    func hideNextLevelButton() {
-        
-    }
-    
-    func fadePlayerInstructions() {
-        
     }
 
 } // END OF CLASS 

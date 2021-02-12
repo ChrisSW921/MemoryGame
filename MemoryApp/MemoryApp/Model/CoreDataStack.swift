@@ -11,7 +11,7 @@ enum CoreDataStack {
     
     static let container: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "MemoryApp")
+        let container = NSPersistentContainer(name: "Highscore")
         container.loadPersistentStores { (_, error) in
             if let error = error {
                 fatalError("Error loading persistent stores: \(error)")
