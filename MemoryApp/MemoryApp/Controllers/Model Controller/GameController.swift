@@ -18,7 +18,7 @@ class GameController {
     var correctSequence: [Int] = []
     var guessedSequence: [Int] = []
 
-    var currentLevel: Int = 1
+    var currentLevel: Int = 0
     var highscore: Int?
     var highscoreCoreData: Highscore?
 
